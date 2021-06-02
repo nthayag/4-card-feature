@@ -1,0 +1,106 @@
+@import 'variables';
+
+//Main HTML File 
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+    background-color: $LightGray;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: $GrayBlue;
+}
+
+//Texts and fonts
+h1{
+    font-size: 1.6667rem;
+    color: $DarkBlue;
+    line-height: 1;
+}
+.box p{
+    color: $GrayBlue;
+    font-size: 0.8rem;
+    margin-bottom: 2.5rem;
+    line-height: 2;
+}
+.box h1{
+    font-size: 1.0667rem;
+}
+
+//Font Weight Helper Class
+.strong{
+    font-weight: 600;
+}
+
+.light{
+    font-weight: 200;
+}
+
+//MAIN SCSS
+header{
+    max-width: 34rem;
+    display: block;
+    margin: 5.333rem auto 0;
+    text-align: center;
+}
+
+.container{
+    margin: 5.333rem auto 0;
+    display: flex;
+    max-width: 90.333rem;
+    padding:0 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.box{
+    position: relative;
+    background-color: white;
+    width: 21.333rem;
+    padding: 2.3335rem 1.6667rem;
+    margin: 0.6666rem;
+    border-radius: 5px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.20), 0 5px 5px rgba(0,0,0,0.10);
+}
+.box img{
+    position: relative;
+    margin-left: 70%;
+ }
+
+//PSEUDO ELEMENTS
+.box::after{
+    content: '';
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.red::after{
+    background-color: hsl(0, 78%, 62%);
+}
+.cyan::after{
+    background-color: hsl(180, 62%, 55%)
+}
+.orange::after{
+    background-color: hsl(34, 97%, 64%)
+} 
+.blue::after{
+    background-color: hsl(212, 86%, 64%)
+}
+
+//MEDIA QUERY
+@media (min-width: 1246px){
+    .transform{
+        transform: translateY(50%);
+    }
+}
+
+//FOOTER
+footer{
+    margin: 10rem auto 0 auto;
+    font-size: 00.6666rem;
+    text-align: center;
+}
